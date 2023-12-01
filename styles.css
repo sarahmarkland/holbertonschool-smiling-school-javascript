@@ -19,22 +19,6 @@
 
 /* General Styles  */
 
-.loader {
-  border: 10px solid #f3f3f3;
-  border-top: 10px solid #C271FF;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 2s linear infinite;
-  margin: auto;
-  display: none; /* initially hide loader */
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 .body {
   font-family: var(--font-family-1);
 }
@@ -179,6 +163,27 @@
 .pros {
   padding-top: 87px;
   padding-bottom: 98px;
+}
+
+/* Task 1 - purple carousel indicators */
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #C271FF;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  display: none; /* initially hide loader */
+}
+
+.quote-text {
+  color: var(--color-white);
+  }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media screen and (max-width: 767px) {

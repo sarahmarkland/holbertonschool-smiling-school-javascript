@@ -30,7 +30,7 @@ function showLoader() {
           data.forEach(function (quote) {
             var quoteItem = `<div class="carousel-item">
                                <blockquote class="blockquote">
-                                 <p>${quote.text}</p>
+                                 <p class="quote-text">${quote.text}</p>
                                  <footer class="blockquote-footer">${quote.name}</footer>
                                </blockquote>
                              </div>`;
