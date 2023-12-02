@@ -243,6 +243,16 @@
   font-size: 22px;
 }
 
+.quote-item {
+  display: flex;
+  align-items: center;
+}
+
+.quote-image {
+  float: left;
+  margin-right: 20px;
+}
+
 .carousel-control-prev img,
 .carousel-control-next img {
   width: 30px;
