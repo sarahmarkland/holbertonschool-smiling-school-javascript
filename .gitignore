@@ -58,3 +58,5 @@ deploy.sh
 template.html
 carousel.html
 *test.html
+scripts-*.js
+xCarouselx/

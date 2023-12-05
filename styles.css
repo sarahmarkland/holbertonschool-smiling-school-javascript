@@ -266,6 +266,16 @@
   padding-left: var(--quotes-arrows-pad);
 }
 
+#carousel {
+  margin: 20px;
+}
+
+.carousel-card {
+  padding: 20px;
+  text-align: center;
+}
+
+
 @media screen and (max-width: 991px) {
   .quotes .carousel-item img {
     margin-left: 80px;
