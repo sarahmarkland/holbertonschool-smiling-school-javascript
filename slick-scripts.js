@@ -49,12 +49,21 @@ fetch('https://smileschool-api.hbtn.info/popular-tutorials')
   function populateCarousel(data) {
     data.forEach(item => {
       $('#popular-card').slick('slickAdd', `
-        <div class="carousel-card">
+        <div class="carousel slide">
+          <div class="card">
           <img src="${item.thumb_url}" alt="${item.title}">
           <h3>${item.title}</h3>
           <p>${item['sub-title']}</p>
-          <!-- Add other content based on your needs -->
-        </div>
+          <div class="carousel-card-info">
+            <div class="carousel-card-info-left">
+              <img src="${item.author_pic_url}" alt="${item.author}">
+              <p>${item.author}</p>
+            </div>
+            <div class="carousel-card-info-right">
+              <img src="images/star_on.png" alt="star">
+              <p>${item.star}</p>
+            </div>
+          </div>
       `);
     });
   }
