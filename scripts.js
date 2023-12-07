@@ -34,7 +34,7 @@ function showLoader() {
                               <blockquote class="blockquote">
                                 <p class="quote-text">${quote.text}</p>
                                 <h4 class="quote-text">${quote.name}</h4>
-                                <span class="quote-text">${quote.title}</span>
+                                <div class="quote-text"><span>${quote.title}</span><div>
                               </blockquote>
                             </div>
                           </div>`;
