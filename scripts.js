@@ -10,8 +10,6 @@ function showLoader() {
     $(".loader").hide();
   }
 
-  
-
   function fetchQuotes() {
     // Display loader before making the request
     showLoader();
@@ -189,56 +187,10 @@ function showLoader() {
     // Populate carousel with data
   }
 
-  function fetchCourses() {
-    // Display loader before making the request
-    showLoader();
-   
-    // Ajax request to get quotes from the API
-    $.ajax({
-     url: "https://smileschool-api.hbtn.info/courses",
-     method: "GET",
-     dataType: "json",
-     success: function (data) {
-       // Handle successful response
-       if (data && data.length > 0) {
-         // Clear existing quotes in the carousel
-         const carouselInner = document.querySelector(".carousel-inner");
-         carouselInner.innerHTML = "";
-   
-         // Iterate through the quotes and add them to the carousel
-          data.forEach(function (course) {
-            var courseItem = `<div class="carousel-item">
-                              <div class="course-item">
-                                <img src="${course.thumb_url}" class="course-image">
-                                <div class="course-info">
-                                  <h4 class="course-title">${course.title}</h4>
-                                  <div class="creator d-flex align-items-center">
-                                    <img src="${course.author_pic_url}" alt="${course.author}" class="rounded-circle" width="30px">
-                                    <h6 class="pl-3 m-0 main-color">${course.author}</h6>
-                                  </div>
-                                  <div class="info pt-3 d-flex justify-content-between">
-                                    <div class="rating">
-                                      <img class="" src="./images/rating.png">
-                                    </div>
-                                    <div class="duration">
-                                      <span>${course.duration}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>`;
-    
-            carouselInner.innerHTML += courseItem;
-          });
-
-          hideLoader();
-   
-         });
-   
+  
 
   // Call the fetchQuotes function when the document is ready
   fetchQuotes();
   fetchTutorials();
   fetchLatestVids();
-  fetchCourses();
 });
